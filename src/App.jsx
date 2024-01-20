@@ -1,6 +1,8 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Navigate } from "react-router-dom";
 
+import ContextProvider from "./components/context-provider/context-provider";
+
 import Layout from "./components/layout/layout";
 import CrewLayout from "./components/layout/crew-layout";
 import DestinationLayout from "./components/layout/destination-layout";
@@ -102,5 +104,9 @@ const routes = createBrowserRouter([
 ]);
 
 export default function App() {
-  return <RouterProvider router={routes} />;
+  return (
+    <ContextProvider>
+      <RouterProvider router={routes} />
+    </ContextProvider>
+  );
 }
