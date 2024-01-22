@@ -16,7 +16,8 @@ export default function Home() {
     if (location.pathname === "/") {
       document.body.style.backgroundImage =
         "url(assets/home/background-home-desktop.jpg)";
-      document.body.style.gridTemplateColumns = "150px 2fr 4fr 1fr";
+      document.getElementById("root").style.gridTemplateColumns =
+        "150px 2fr 4fr 1fr";
       if (window.innerWidth < 768) {
         document.body.style.backgroundImage =
           "url(assets/home/background-home-tablet.jpg)";
@@ -31,9 +32,9 @@ export default function Home() {
       <section
         className={`col-[3_/_-3] row-[1_/_span_1] self-center justify-self-center md:col-[2_/_span_5] md:row-[1_/_span_1] pr-0 min-[890px]:pr-[8%] min-[1150px]:pr-[20%] max-[768px]:self-center max-[768px]:justify-self-center`}
       >
-        <h5 className={`mb-[1rem] md:text-left`}>So, you want to travel</h5>
-        <h1 className={`mb-[1rem] md:text-left`}>Space</h1>
-        <p className={`mb-[1rem] md:text-left`}>
+        <h5 className={`md:text-left`}>So, you want to travel</h5>
+        <h1 className={`md:text-left`}>Space</h1>
+        <p className={`md:text-left`}>
           Let’s face it; if you want to go to space, you might as well genuinely
           go to outer space and not hover kind of on the edge of it. Well sit
           back, and relax because we’ll give you a truly out of this world

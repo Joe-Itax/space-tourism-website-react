@@ -110,15 +110,16 @@ body {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 150px;
+
   height: 100%;
 }
 
 #root {
-  grid-column: 1 / -1;
-  grid-row: 1 / none;
+  /* grid-column: 1 / -1;
+  grid-row: 1 / none; */
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 150px;
 }
 
 nav ul li {
