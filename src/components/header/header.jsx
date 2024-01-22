@@ -43,13 +43,23 @@ export default function Header() {
               alt="Logo du site"
             />
           </NavLink>
-          <img
+          {isOpen ? (
+            <img
+            className="iconHamburger cursor-pointer col-[-3_/_span_1] row-[2_/_span_2] self-center justify-self-center w-[37px] z-[999]"
+            id="iconHamburger"
+            src="assets/shared/icon-close.svg"
+            alt="icon close"
+            onClick={openNavMobile}
+          />
+          ):(
+            <img
             className="iconHamburger cursor-pointer col-[-3_/_span_1] row-[2_/_span_2] self-center justify-self-center w-[37px] z-[999]"
             id="iconHamburger"
             src="assets/shared/icon-hamburger.svg"
-            alt="menu icon"
+            alt="icon hamburger"
             onClick={openNavMobile}
           />
+          )}
           <nav
             className={`navMobile absolute backdrop-blur-[50px] h-full w-[85%] shadow-[0px_0px_7px_0px_rgba(255,255,255,0.1)] p-8 right-0 top-0 z-[1] transition-all duration-[.3s] ${
               !isOpen ? "-left-full" : "right-[0]"
