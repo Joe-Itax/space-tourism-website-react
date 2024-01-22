@@ -51,7 +51,7 @@ export default function Header() {
             onClick={openNavMobile}
           />
           <nav
-            className={`navMobile absolute backdrop-blur-[50px] h-full w-[85%] shadow-[0px_0px_7px_0px_rgba(255,255,255,0.1)] p-8 right-0 top-0 z-[1] ${
+            className={`navMobile absolute backdrop-blur-[50px] h-full w-[85%] shadow-[0px_0px_7px_0px_rgba(255,255,255,0.1)] p-8 right-0 top-0 z-[1] transition-all duration-[.3s] ${
               !isOpen ? "-left-full" : "right-[0]"
             }`}
           >
@@ -113,7 +113,7 @@ export default function Header() {
               <li className={`text-base`}>
                 <NavLink
                   to="/"
-                  className={`text-white no-underline uppercase tracking-[4.75px] px-0 py-[0.4rem] hover:border-b-2 hover:border-b-[#979797] hover:border-solid`}
+                  className={`text-white no-underline uppercase tracking-[4.75px] px-0 py-[1.4rem] hover:border-b-2 hover:border-b-[#979797] hover:border-solid`}
                 >
                   <span className="numNav font-[bold] mr-[0.7rem]">01</span>Home
                 </NavLink>
@@ -121,7 +121,7 @@ export default function Header() {
               <li className={`text-base`}>
                 <NavLink
                   to="/destination"
-                  className={`text-white no-underline uppercase tracking-[4.75px] px-0 py-[0.4rem] hover:border-b-2 hover:border-b-[#979797] hover:border-solid`}
+                  className={`text-white no-underline uppercase tracking-[4.75px] px-0 py-[1.4rem] hover:border-b-2 hover:border-b-[#979797] hover:border-solid`}
                 >
                   <span className="numNav font-[bold] mr-[0.7rem]">02</span>
                   Destination
@@ -130,7 +130,7 @@ export default function Header() {
               <li className={`text-base`}>
                 <NavLink
                   to="/crew"
-                  className={`text-white no-underline uppercase tracking-[4.75px] px-0 py-[0.4rem] hover:border-b-2 hover:border-b-[#979797] hover:border-solid`}
+                  className={`text-white no-underline uppercase tracking-[4.75px] px-0 py-[1.4rem] hover:border-b-2 hover:border-b-[#979797] hover:border-solid`}
                 >
                   <span className="numNav font-[bold] mr-[0.7rem]">03</span>Crew
                 </NavLink>
@@ -138,7 +138,7 @@ export default function Header() {
               <li className={`text-base`}>
                 <NavLink
                   to="/technology"
-                  className={`text-white no-underline uppercase tracking-[4.75px] px-0 py-[0.4rem] hover:border-b-2 hover:border-b-[#979797] hover:border-solid`}
+                  className={`text-white no-underline uppercase tracking-[4.75px] px-0 py-[1.4rem] hover:border-b-2 hover:border-b-[#979797] hover:border-solid`}
                 >
                   <span className="numNav font-[bold] mr-[0.7rem]">04</span>
                   Technology

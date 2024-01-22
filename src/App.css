@@ -1,5 +1,5 @@
 /* Importation des polices */
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap");
 :root {
   --white: #ffffff;
   --blueDark: #0b0d17;
@@ -15,7 +15,7 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: 'Bellefair', sans-serif;
+  font-family: "Bellefair", sans-serif;
   text-transform: uppercase;
   font-weight: 400;
   margin: 0;
@@ -39,7 +39,7 @@ h4 {
 }
 
 h5 {
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: "Barlow Condensed", sans-serif;
   font-size: 2rem;
   letter-spacing: 4.75px;
   text-transform: uppercase;
@@ -68,7 +68,7 @@ p {
   }
 
   h5 {
-    font-family: 'Barlow Condensed', sans-serif;
+    font-family: "Barlow Condensed", sans-serif;
     font-size: 1rem;
     letter-spacing: 4.75px;
     text-transform: uppercase;
@@ -93,18 +93,18 @@ p {
   }
 
   h5 {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: .8rem;
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 0.8rem;
     letter-spacing: 4.75px;
     text-transform: uppercase;
     font-weight: 400;
   }
 }
 label {
-  font-family: 'Bellefair', sans-serif;
+  font-family: "Bellefair", sans-serif;
 }
 
-body{
+body {
   background: var(--blueDark);
   color: var(--white);
   background-position: center center;
@@ -116,17 +116,36 @@ body{
   height: 100%;
 }
 
-#root{
+#root {
   grid-column: 1 / -1;
-  grid-row: 1/none;
+  grid-row: 1 / none;
 }
 
 nav ul li {
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: "Barlow Condensed", sans-serif;
 }
 
-nav ul li a.active, nav ul li a.active:hover {
+nav ul li a.active,
+nav ul li a.active:hover {
   border-bottom: 2px solid #fff;
+}
+
+div.boxBtnExplore a {
+  clip-path: circle(40%);
+}
+
+.btnHover {
+  clip-path: circle(40%);
+}
+
+.btnHover p {
+  clip-path: circle(40%);
+}
+
+@media (max-width: 380px) {
+  .btnHover p {
+    clip-path: circle(40%);
+  }
 }
 /* 
 header {
@@ -187,9 +206,9 @@ nav ul li a .numNav {
   margin-right: 0.7rem;
 } */
 
-
 /* Style particulier à Home */
-main .boxBtnExplore {align-self: end;
+/* main .boxBtnExplore {
+  align-self: end;
   clip-path: circle(40%);
 }
 div.boxBtnExplore a {
@@ -197,13 +216,7 @@ div.boxBtnExplore a {
 }
 .btnHover p {
   clip-path: circle(40%);
-}
-
-
-
-
-
-
+} */
 
 /* HTML: <div class="loader"></div> */
 .loader {
@@ -211,22 +224,90 @@ div.boxBtnExplore a {
   aspect-ratio: 1;
   border-radius: 50%;
   border: 8px solid #514b82;
-  animation:
-    l20-1 0.8s infinite linear alternate,
-    l20-2 1.6s infinite linear;
+  animation: l20-1 0.8s infinite linear alternate, l20-2 1.6s infinite linear;
 }
-@keyframes l20-1{
-   0%    {clip-path: polygon(50% 50%,0       0,  50%   0%,  50%    0%, 50%    0%, 50%    0%, 50%    0% )}
-   12.5% {clip-path: polygon(50% 50%,0       0,  50%   0%,  100%   0%, 100%   0%, 100%   0%, 100%   0% )}
-   25%   {clip-path: polygon(50% 50%,0       0,  50%   0%,  100%   0%, 100% 100%, 100% 100%, 100% 100% )}
-   50%   {clip-path: polygon(50% 50%,0       0,  50%   0%,  100%   0%, 100% 100%, 50%  100%, 0%   100% )}
-   62.5% {clip-path: polygon(50% 50%,100%    0, 100%   0%,  100%   0%, 100% 100%, 50%  100%, 0%   100% )}
-   75%   {clip-path: polygon(50% 50%,100% 100%, 100% 100%,  100% 100%, 100% 100%, 50%  100%, 0%   100% )}
-   100%  {clip-path: polygon(50% 50%,50%  100%,  50% 100%,   50% 100%,  50% 100%, 50%  100%, 0%   100% )}
+@keyframes l20-1 {
+  0% {
+    clip-path: polygon(50% 50%, 0 0, 50% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 0%);
+  }
+  12.5% {
+    clip-path: polygon(
+      50% 50%,
+      0 0,
+      50% 0%,
+      100% 0%,
+      100% 0%,
+      100% 0%,
+      100% 0%
+    );
+  }
+  25% {
+    clip-path: polygon(
+      50% 50%,
+      0 0,
+      50% 0%,
+      100% 0%,
+      100% 100%,
+      100% 100%,
+      100% 100%
+    );
+  }
+  50% {
+    clip-path: polygon(
+      50% 50%,
+      0 0,
+      50% 0%,
+      100% 0%,
+      100% 100%,
+      50% 100%,
+      0% 100%
+    );
+  }
+  62.5% {
+    clip-path: polygon(
+      50% 50%,
+      100% 0,
+      100% 0%,
+      100% 0%,
+      100% 100%,
+      50% 100%,
+      0% 100%
+    );
+  }
+  75% {
+    clip-path: polygon(
+      50% 50%,
+      100% 100%,
+      100% 100%,
+      100% 100%,
+      100% 100%,
+      50% 100%,
+      0% 100%
+    );
+  }
+  100% {
+    clip-path: polygon(
+      50% 50%,
+      50% 100%,
+      50% 100%,
+      50% 100%,
+      50% 100%,
+      50% 100%,
+      0% 100%
+    );
+  }
 }
-@keyframes l20-2{ 
-  0%    {transform:scaleY(1)  rotate(0deg)}
-  49.99%{transform:scaleY(1)  rotate(135deg)}
-  50%   {transform:scaleY(-1) rotate(0deg)}
-  100%  {transform:scaleY(-1) rotate(-135deg)}
+@keyframes l20-2 {
+  0% {
+    transform: scaleY(1) rotate(0deg);
+  }
+  49.99% {
+    transform: scaleY(1) rotate(135deg);
+  }
+  50% {
+    transform: scaleY(-1) rotate(0deg);
+  }
+  100% {
+    transform: scaleY(-1) rotate(-135deg);
+  }
 }
