@@ -39,6 +39,71 @@ const routes = createBrowserRouter([
       },
       {
         path: "/crew",
+        element: <Commander />,
+      },
+      {
+        path: "/crew/specialist",
+        element: <Specialist />,
+      },
+      {
+        path: "/crew/pilot",
+        element: <Pilot />,
+      },
+      {
+        path: "/crew/engineer",
+        element: <Engineer />,
+      },
+      {
+        path: "/destination/moon",
+        element: <Moon />,
+      },
+      {
+        path: "/destination/mars",
+        element: <Mars />,
+      },
+      {
+        path: "/destination/europa",
+        element: <Europa />,
+      },
+      {
+        path: "/destination/titan",
+        element: <Titan />,
+      },
+      {
+        path: "/technology",
+        element: <Vehicle />,
+      },
+      {
+        path: "/technology/capsule",
+        element: <Capsule />,
+      },
+      {
+        path: "/technology/spaceport",
+        element: <Spaceport />,
+      },
+    ],
+  },
+]);
+
+export default function App() {
+  return (
+    <ContextProvider>
+      <RouterProvider router={routes} />
+    </ContextProvider>
+  );
+}
+
+/*const routes = createBrowserRouter([
+  {
+    path: "/",
+    element: <Layout />,
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
+      {
+        path: "/crew",
         element: <CrewLayout />,
         children: [
           {
@@ -101,12 +166,4 @@ const routes = createBrowserRouter([
       },
     ],
   },
-]);
-
-export default function App() {
-  return (
-    <ContextProvider>
-      <RouterProvider router={routes} />
-    </ContextProvider>
-  );
-}
+]);*/

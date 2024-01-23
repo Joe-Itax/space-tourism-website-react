@@ -1,0 +1,18 @@
+.destinaion-nav ul {
+  display: flex;
+}
+
+.destinaion-nav ul li button {
+  color: #999ca4;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s ease-in-out;
+}
+
+.destinaion-nav ul li button:hover {
+  border-color: #999ca4;
+}
+
+.destinaion-nav ul li button.active {
+  color: #fff;
+  border-color: #fff;
+}

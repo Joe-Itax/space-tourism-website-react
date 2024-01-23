@@ -1,9 +1,20 @@
-import { useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
+
+import "./destination-nav.css";
 
 export default function DestinationNavbar() {
   const navigate = useNavigate();
+
+  const location = useLocation();
+  const [activeItem, setActiveItem] = useState("");
+
+  useEffect(() => {
+    setActiveItem(location.pathname);
+  }, [location.pathname]);
+
   function handleClickMoon() {
-    navigate("/destination");
+    navigate("/destination/moon");
   }
   function handleClickMars() {
     navigate("/destination/mars");
@@ -15,26 +26,38 @@ export default function DestinationNavbar() {
     navigate("/destination/titan");
   }
   return (
-    <nav>
-      <ul>
+    <nav className="destinaion-nav">
+      <ul className="flex w-full gap-8">
         <li>
-          <button onClick={handleClickMoon}>
-            <div>Moon</div>
+          <button
+            onClick={handleClickMoon}
+            className={activeItem === "/destination/moon" ? "active" : ""}
+          >
+            Moon
           </button>
         </li>
         <li>
-          <button onClick={handleClickMars}>
-            <div>Mars</div>
+          <button
+            onClick={handleClickMars}
+            className={activeItem === "/destination/mars" ? "active" : ""}
+          >
+            Mars
           </button>
         </li>
         <li>
-          <button onClick={handleClickEuropa}>
-            <div>Europa</div>
+          <button
+            onClick={handleClickEuropa}
+            className={activeItem === "/destination/europa" ? "active" : ""}
+          >
+            Europa
           </button>
         </li>
         <li>
-          <button onClick={handleClickTitan}>
-            <div>Titan</div>
+          <button
+            onClick={handleClickTitan}
+            className={activeItem === "/destination/titan" ? "active" : ""}
+          >
+            Titan
           </button>
         </li>
       </ul>

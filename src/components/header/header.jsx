@@ -76,7 +76,7 @@ export default function Header() {
               </li>
               <li className={`text-base`}>
                 <NavLink
-                  to="/destination"
+                  to="/destination/moon"
                   className={`text-white no-underline uppercase tracking-[4.75px] px-0 py-[0.4rem] hover:border-b-2 hover:border-b-[#979797] hover:border-solid`}
                 >
                   <span className="numNav font-[bold] mr-[0.7rem]">02</span>
@@ -130,7 +130,7 @@ export default function Header() {
               </li>
               <li className={`text-base`}>
                 <NavLink
-                  to="/destination"
+                  to="/destination/moon"
                   className={`text-white no-underline uppercase tracking-[4.75px] px-0 py-[1.6rem] hover:border-b-2 hover:border-b-[#979797] hover:border-solid`}
                 >
                   <span className="numNav font-[bold] mr-[0.7rem]">02</span>
